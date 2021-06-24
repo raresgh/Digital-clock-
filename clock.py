@@ -22,7 +22,7 @@ class Alarm():
         for self in alarms:
             if time_live == self.alarm_time:
                 if stopped == False:
-                    pygame.mixer.music.load("C:/Users/rares/OneDrive/Desktop/python_curs/lectia 20(modul 2)/ringtone.mp3")
+                    pygame.mixer.music.load("ringtone.mp3")
                     pygame.mixer.music.play()
                     stopped = True
                     stop()
