@@ -4,8 +4,8 @@ import pygame
 
 text_font = ("Boulder", 68, "bold")
 text_font2 = ("Boulder", 16)
-background = "#f2e750"
-foreground = "#363529"
+background = "#91443f"
+foreground = "#f5eceb"
 border_width = 25
 alarms = []
 stopped = False
@@ -38,9 +38,9 @@ def main():
     global label
     app_window = Tk()
     app_window.title("Digital Clock App")
-    app_window.geometry("420x300")
+    app_window.geometry("420x300+725+180")
     app_window.resizable(1,1)
-    app_window.configure(bg = "#f2e750")
+    app_window.configure(bg = background)
 
 
     label = Label(
@@ -100,10 +100,10 @@ def digital_clock():
 def alarm_func():
     global alarm_win
     alarm_win = Toplevel()
-    alarm_win.title("Digital Clock App")
-    alarm_win.geometry("640x200")
+    alarm_win.title("Alarm")
+    alarm_win.geometry("640x200+620+510")
     alarm_win.resizable(1,1)
-    alarm_win.configure(bg = "#f2e750")
+    alarm_win.configure(bg = background)
 
     global hour1, hour2, minutes1, minutes2, seconds1, seconds2
 
@@ -113,17 +113,25 @@ def alarm_func():
         to = 2,
         wrap = True,
         font = ("Boulder", 50, "bold"),
-        width = 1
+        width = 1,
+        bg = background,
+        fg = foreground,
+        buttonbackground = "#deb0ab",
+        buttoncursor = "hand1"
     )
     hour1.grid(row = 0, column = 1, pady = 24, padx = 10)
 
     hour2 = Spinbox(
         alarm_win,
         from_ = 0,
-        to = 9,
+        to = 3,
         wrap = True,
         font = ("Boulder", 50, "bold"),
-        width = 1
+        width = 1,
+        bg = background,
+        fg = foreground,
+        buttonbackground = "#deb0ab",
+        buttoncursor = "hand1"
     )
     hour2.grid(row = 0, column = 2, pady = 24)
 
@@ -142,7 +150,11 @@ def alarm_func():
         to = 5,
         wrap = True,
         font = ("Boulder", 50, "bold"),
-        width = 1
+        width = 1,
+        bg = background,
+        fg = foreground,
+        buttonbackground = "#deb0ab",
+        buttoncursor = "hand1"
     )
     minutes1.grid(row = 0, column = 4, pady = 24, padx = 10)
 
@@ -152,7 +164,11 @@ def alarm_func():
         to = 9,
         wrap = True,
         font = ("Boulder", 50, "bold"),
-        width = 1
+        width = 1,
+        bg = background,
+        fg = foreground,
+        buttonbackground = "#deb0ab",
+        buttoncursor = "hand1"
     )
     minutes2.grid(row = 0, column = 5, pady = 24)
 
@@ -171,7 +187,11 @@ def alarm_func():
         to = 5,
         wrap = True,
         font = ("Boulder", 50, "bold"),
-        width = 1
+        width = 1,
+        bg = background,
+        fg = foreground,
+        buttonbackground = "#deb0ab",
+        buttoncursor = "hand1"
     )
     seconds1.grid(row = 0, column = 7, pady = 24, padx = 10)
 
@@ -181,7 +201,11 @@ def alarm_func():
         to = 9,
         wrap = True,
         font = ("Boulder", 50, "bold"),
-        width = 1
+        width = 1,
+        bg = background,
+        fg = foreground,
+        buttonbackground = "#deb0ab",
+        buttoncursor = "hand1"
     )
     seconds2.grid(row = 0, column = 8, pady = 24)
 
@@ -231,6 +255,7 @@ def timer():
     timer_app = Toplevel()
     timer_app.configure(bg = background)
     timer_app.title("Timer")
+    #timer_app.geometry("420x300+1000+180")
 
     frame = Frame(
         timer_app,
@@ -246,7 +271,11 @@ def timer():
         to = 2,
         wrap = True,
         font = ("Boulder", 50, "bold"),
-        width = 1
+        width = 1,
+        bg = background,
+        fg = foreground,
+        buttonbackground = "#deb0ab",
+        buttoncursor = "hand1"
     )
     hour1.grid(row = 0, column = 1, pady = 24, padx = 10)
 
@@ -256,7 +285,11 @@ def timer():
         to = 9,
         wrap = True,
         font = ("Boulder", 50, "bold"),
-        width = 1
+        width = 1,
+        bg = background,
+        fg = foreground,
+        buttonbackground = "#deb0ab",
+        buttoncursor = "hand1"
     )
     hour2.grid(row = 0, column = 2, pady = 24)
 
@@ -275,7 +308,11 @@ def timer():
         to = 5,
         wrap = True,
         font = ("Boulder", 50, "bold"),
-        width = 1
+        width = 1,
+        bg = background,
+        fg = foreground,
+        buttonbackground = "#deb0ab",
+        buttoncursor = "hand1"
     )
     minutes1.grid(row = 0, column = 4, pady = 24, padx = 10)
 
@@ -285,7 +322,11 @@ def timer():
         to = 9,
         wrap = True,
         font = ("Boulder", 50, "bold"),
-        width = 1
+        width = 1,
+        bg = background,
+        fg = foreground,
+        buttonbackground = "#deb0ab",
+        buttoncursor = "hand1"
     )
     minutes2.grid(row = 0, column = 5, pady = 24)
 
@@ -304,7 +345,11 @@ def timer():
         to = 5,
         wrap = True,
         font = ("Boulder", 50, "bold"),
-        width = 1
+        width = 1,
+        bg = background,
+        fg = foreground,
+        buttonbackground = "#deb0ab",
+        buttoncursor = "hand1"
     )
     seconds1.grid(row = 0, column = 7, pady = 24, padx = 10)
 
@@ -314,7 +359,11 @@ def timer():
         to = 9,
         wrap = True,
         font = ("Boulder", 50, "bold"),
-        width = 1
+        width = 1,
+        bg = background,
+        fg = foreground,
+        buttonbackground = "#deb0ab",
+        buttoncursor = "hand1"
     )
     seconds2.grid(row = 0, column = 8, pady = 24)
 
@@ -391,7 +440,8 @@ def stopwatch():
 
     stopwatch_app = Toplevel()
     stopwatch_app.configure(bg = background)
-    stopwatch_app.geometry("420x250")
+    stopwatch_app.geometry("420x250+1145+210")
+    stopwatch_app.title("Stopwatch")
 
     global hours, minutes, seconds, time_done
     hours = 0
@@ -403,7 +453,8 @@ def stopwatch():
         stopwatch_app,
         text = str(hours) + ":" + str(minutes) + ":" + str(seconds),
         font = text_font,
-        bg = background
+        bg = background,
+        fg = foreground
     )
     timer2.pack(padx = 15)
 
